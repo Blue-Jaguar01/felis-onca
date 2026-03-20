@@ -9,16 +9,16 @@
     <style>
        html { scroll-behavior: smooth; }   
        body { background-color: #F9F8F6; color: #1C1C1C; font-family: 'Inter', sans-serif; }
-        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+       h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
         
-        /* Custom "Vat Soaked" Background Effect for Dye Section */
+        /* Custom "Vat Soaked" Background Effect */
         .ink-bleed {
             background: radial-gradient(circle at 10% 20%, rgba(220, 214, 205, 0.4) 0%, transparent 50%),
                         radial-gradient(circle at 90% 80%, rgba(214, 204, 194, 0.4) 0%, transparent 50%);
             background-color: #fdfcfb;
         }
 
-         /* THE REFRESHING REVEAL FEATURE */
+        /* THE REFRESHING REVEAL FEATURE */
         .fade-in { animation: fadeIn 2.5s ease-out forwards; }
         @keyframes fadeIn { 
             from { opacity: 0; transform: translateY(20px); } 
@@ -35,12 +35,12 @@
 
     <div class="flex justify-center items-center gap-32 md:gap-48 border-t border-stone-100 pt-8">
         <a href="heritage.html" class="text-[12px] uppercase tracking-[0.5em] font-light hover:text-stone-400 transition">The Provenance</a>
-        <a href="craft.html" class="text-[12px] uppercase tracking-[0.5em] font-light hover:text-stone-400 transition">The Craft</a>        
+        <a href="craft.html" class="text-[12px] uppercase tracking-[0.5em] font-light border-b border-stone-800 pb-1 transition">The Craft</a>         
     </div>
 </nav>
 
     <main>
-        <section class="max-w-6xl mx-auto px-12 py-12 text-center">
+        <section class="max-w-6xl mx-auto px-12 py-12 text-center fade-in">
             <span class="text-[10px] uppercase tracking-[0.4em] text-stone-400 block mb-6">The Atelier</span>
             <h2 class="text-5xl md:text-7xl font-light italic serif mb-8">The Humanist Rhythm</h2>
             <p class="text-stone-500 max-w-2xl mx-auto font-light leading-relaxed">
@@ -48,7 +48,7 @@
             </p>
         </section>
 
-        <section class="max-w-6xl mx-auto px-12 py-24 border-t border-stone-200">
+        <section class="max-w-6xl mx-auto px-12 py-24 border-t border-stone-200 fade-in">
             <div class="grid md:grid-cols-12 gap-12 items-center">
                 <div class="md:col-span-6">
                     <h2 class="text-3xl md:text-4xl mb-8 font-light italic serif leading-tight">Mastery of the Hand</h2>
@@ -66,7 +66,7 @@
             </div>
         </section>
 
-        <section class="bg-stone-50 py-32">
+        <section class="bg-stone-50 py-32 fade-in">
             <div class="max-w-4xl mx-auto px-12 text-center">
                 <h2 class="text-3xl md:text-5xl font-light italic serif leading-tight text-stone-800">
                     "We do not seek perfection; we seek character."
@@ -75,7 +75,7 @@
             </div>
         </section>
 
-        <section class="max-w-6xl mx-auto px-12 py-24 border-t border-stone-200">
+        <section class="max-w-6xl mx-auto px-12 py-24 border-t border-stone-200 fade-in">
             <div class="grid md:grid-cols-12 gap-12 items-center">
                 <div class="md:col-span-6 order-2 md:order-1">
                     <div class="aspect-[4/5] overflow-hidden">
@@ -94,7 +94,7 @@
             </div>
         </section>
 
-        <section class="max-w-6xl mx-auto px-12 py-24 border-t border-stone-200">
+        <section class="max-w-6xl mx-auto px-12 py-24 border-t border-stone-200 fade-in">
             <div class="grid md:grid-cols-12 gap-12 items-center">
                 <div class="md:col-span-5">
                     <h3 class="text-3xl md:text-4xl font-light italic serif mb-8 leading-tight">The Selvedge of Authenticity</h3>
@@ -108,7 +108,7 @@
             </div>
         </section>
 
-        <section class="ink-bleed py-32 border-t border-stone-200">
+        <section class="ink-bleed py-32 border-t border-stone-200 fade-in">
             <div class="max-w-3xl mx-auto px-12 text-center">
                 <h3 class="text-3xl md:text-4xl font-light italic serif mb-10 leading-tight">Colors Borrowed from the Soil</h3>
                 <p class="text-stone-600 font-light leading-relaxed mb-12">
