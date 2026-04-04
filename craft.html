@@ -3,126 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Craft | Felis Onca</title>
+    <title>Craft | Felis Onca</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Pinyon+Script&family=Tenor+Sans&display=swap" rel="stylesheet">
     <style>
-       html { scroll-behavior: smooth; }   
-       body { background-color: #F9F8F6; color: #1C1C1C; font-family: 'Inter', sans-serif; }
-       h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #F4F2EE; color: #1C1C1C; font-family: 'Inter', sans-serif; letter-spacing: 0.01em; }
+        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
         
-        /* Custom "Vat Soaked" Background Effect */
-        .ink-bleed {
-            background: radial-gradient(circle at 10% 20%, rgba(220, 214, 205, 0.4) 0%, transparent 50%),
-                        radial-gradient(circle at 90% 80%, rgba(214, 204, 194, 0.4) 0%, transparent 50%);
-            background-color: #fdfcfb;
+       /* THE GPU PERFORMANCE BOOST */
+        #patina-scroll {
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+            will-change: transform;
         }
 
-        /* THE REFRESHING REVEAL FEATURE */
-        .fade-in { animation: fadeIn 2.5s ease-out forwards; }
+        /* The Luxury Reveal */
+        .fade-in { animation: fadeIn 2.5s ease-out forwards; opacity: 0; }
         @keyframes fadeIn { 
             from { opacity: 0; transform: translateY(20px); } 
-            to { opacity: 1; transform: translateY(0); }
-        } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        /* Artistic Map Filter */
+        .map-sepia { filter: sepia(0.2) contrast(1.1) brightness(0.95); transition: all 1.5s ease; }
+        .map-sepia:hover { filter: sepia(0) contrast(1) brightness(1); }
     </style>
 </head>
 <body class="antialiased">
-    
-<nav class="w-full px-8 py-8 pb-10 md:px-20">
-    <div class="flex justify-center mb-8">
-        <a href="index.html" class="text-xl md:text-2xl tracking-[0.8em] font-light uppercase transition hover:opacity-80">Felis Onca</a>
-    </div>
 
-    <div class="flex justify-center items-center gap-32 md:gap-48 border-t border-stone-100 pt-8">
-        <a href="heritage.html" class="text-[12px] uppercase tracking-[0.5em] font-light hover:text-stone-400 transition">The Provenance</a>
-        <a href="craft.html" class="text-[12px] uppercase tracking-[0.5em] font-light border-b border-stone-800 pb-1 transition">The Craft</a>         
+   <nav class="w-full pt-8 pb-8 md:px-20 bg-[#F4F2EE] border-b border-stone-200">
+    <div class="flex flex-col items-center">
+        
+        <div class="mb-4 fade-in" style="animation-delay: 0.2s;">
+            <a href="index.html">
+                <img src="Logo/Logo7.png" alt="Felis Onca Seal" class="h-12 w-auto opacity-90"> </a>
+        </div>
+
+        <div class="mb-6 fade-in" style="animation-delay: 0.4s;">
+            <a href="index.html" class="text-stone-800 transition hover:opacity-60">
+                <h1 class="text-2xl md:text-3xl uppercase font-light tracking-[1em] -mr-[1em]">
+                    Felis Onca
+                </h1>
+            </a>
+        </div>
+
+       <div class="flex justify-center items-center gap-12 md:gap-24 fade-in" style="animation-delay: 0.6s;">
+    <a href="genesis.html" class="text-[10px] uppercase font-light text-stone-400 hover:text-stone-800 tracking-[0.5em] -mr-[0.5em]" style="font-family: 'Tenor Sans';">Genesis</a>
+    <a href="provenance.html" class="text-[10px] uppercase font-light text-stone-400 hover:text-stone-800 tracking-[0.5em] -mr-[0.5em]" style="font-family: 'Tenor Sans';">Provenance</a>
+    <a href="atelier.html" class="text-[10px] uppercase font-medium border-b border-stone-800 pb-1 tracking-[0.5em] -mr-[0.5em]" style="font-family: 'Tenor Sans';">Atelier</a>
+</div>
+
     </div>
 </nav>
 
     <main>
-        <section class="max-w-6xl mx-auto px-12 py-12 text-center fade-in">
-            <span class="text-[10px] uppercase tracking-[0.4em] text-stone-400 block mb-6">The Atelier</span>
-            <h2 class="text-5xl md:text-7xl font-light italic serif mb-8">The Humanist Rhythm</h2>
-            <p class="text-stone-500 max-w-2xl mx-auto font-light leading-relaxed">
-                Exploring the technical mastery of the hand-woven thread—where time is the primary ingredient and the hand is the ultimate architect.
-            </p>
+
+        <section class="min-h-[60vh] flex flex-col items-center justify-center text-center px-6 py-36 fade-in">
+            <span class="text-[10px] uppercase tracking-[0.6em] text-stone-400 mb-10">The Atelier of Craft</span>
+            <h1 class="text-4xl md:text-6xl font-light serif italic leading-tight max-w-4xl">
+                To touch the garment, <br> One must feel the hand.
+            </h1>
         </section>
 
-        <section class="max-w-6xl mx-auto px-12 py-24 border-t border-stone-200 fade-in">
+        <section class="max-w-6xl mx-auto px-12 py-28 border-t border-stone-200 fade-in">
             <div class="grid md:grid-cols-12 gap-12 items-center">
                 <div class="md:col-span-6">
-                    <h2 class="text-3xl md:text-4xl mb-8 font-light italic serif leading-tight">Mastery of the Hand</h2>
-                    <p class="text-stone-600 font-light leading-relaxed mb-6">
-                        Before the loom breathes, the hand must spin. Our yarn is twisted manually, creating subtle variations. These are not defects; they are the acoustic signatures of a living textile.
+                    <span class="text-[10px] uppercase tracking-[0.5em] text-stone-400 mb-4 block">The Atelier of the Thread</span>
+                    <h2 class="text-4xl md:text-5xl mb-10 font-light italic serif leading-tight">The Rhythmic Cadence</h2>
+
+                    <p class="text-stone-700 font-light leading-[1.8] serif text-xl md:text-2xl italic mb-8">
+                        Before the loom breathes, the fiber must be awakened. Our yarn is birthed through the slow, manual rotation of the Amber Charkha preserving the high-tensile character of the primordial seed. These subtle varations are the acoustic signatures of a living textile.
                     </p>
-                    <p class="text-stone-600 font-light leading-relaxed">
-                        By managing the entire lifecycle—from our proprietary heritage farms to the master looms—Felis Onca ensures an unbroken chain of custody.
+                    <p class="text-stone-700 font-light leading-[1.8] serif text-xl md:text-2xl italic">
+                        By overseeing the entire lifecycle—from the mineral-rich soil of the southern plains to the master looms of the atelier—Felis Onca ensures an unbroken chain of custody. Every thread is a preserved lineage, traced back to its biological origin.
                     </p>
                 </div>
-                <div class="md:col-span-5 md:col-start-8 aspect-[3/4] overflow-hidden group">
-                    <img src="assets/Handspinning.jpg" alt="Handspinning Mastery" 
-                         class="w-full h-full object-cover transition-all duration-1000 group-hover:grayscale">
+                <div class="md:col-span-5 md:col-start-8 aspect-[4/5] overflow-hidden group shadow-2xl">
+                    <img src="assets/handspinning.png" alt="Handspinning Mastery" 
+                         class="w-full h-full object-cover object-[35%-45%] transition-all duration-1000 group-hover:grayscale">
                 </div>
             </div>
         </section>
 
-        <section class="bg-stone-50 py-32 fade-in">
+<section class="max-w-6xl mx-auto px-12 py-28 fade-in">
+    <div class="grid md:grid-cols-12 gap-12 items-center">
+        
+        <div class="md:col-span-5 aspect-[16/9] overflow-hidden group shadow-2xl bg-stone-100 md:order-1 order-2">
+            <img src="assets/handloom.png" alt="Handloom Mastery" 
+                 class="w-full h-full object-cover object-center transition-all duration-[1.5s] ease-out group-hover:scale-110 grayscale hover:grayscale-0">
+        </div>
+        
+        <div class="md:col-span-6 md:col-start-8 md:order-2 order-1">
+            <span class="text-[10px] uppercase tracking-[0.5em] text-stone-400 mb-4 block">The Atelier of the Loom</span>
+            <h3 class="text-4xl md:text-5xl font-light italic serif mb-10 leading-tight">Mastery of the Hand</h3>
+            
+            <p class="text-stone-700 font-light leading-[1.8] serif text-xl md:text-2xl italic mb-8">
+                When cotton is woven by hand, tension is managed by human sensitivity. This deliberate interlacing preserves the natural air-pockets of the indigenous fiber, creating an organic breathability that acts as a second, thermal skin.
+            </p>
+            <p class="text-stone-700 font-light leading-[1.8] serif text-xl md:text-2xl italic">
+                Unlike the crushed, lifeless fibers of industrial production, Felis Onca cloth remains structurally "alive". It is a responsive topography that adapts to the climate and the unique silhouette of the weaver.
+            </p>
+        </div>
+
+    </div> </section>
+
+        <section class="bg-stone-50 py-28 fade-in">
             <div class="max-w-4xl mx-auto px-12 text-center">
                 <h2 class="text-3xl md:text-5xl font-light italic serif leading-tight text-stone-800">
-                    "We do not seek perfection; we seek character."
+                    "Every thread is a dialogue between the ancestor and the artisan."
                 </h2>
-                <span class="text-[12px] uppercase tracking-[0.4em] text-stone-400 mt-8 block">— The Fingerprints of the Weaver</span>
+                <span class="text-[12px] uppercase tracking-[0.6em] text-stone-400 mt-8 block">— The Atelier of Wisdom</span>
             </div>
         </section>
 
-        <section class="max-w-6xl mx-auto px-12 py-24 border-t border-stone-200 fade-in">
-            <div class="grid md:grid-cols-12 gap-12 items-center">
-                <div class="md:col-span-6 order-2 md:order-1">
-                    <div class="aspect-[4/5] overflow-hidden">
-                        <img src="assets/Handloom.jpg" alt="Honeycomb Weave Structure" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
-                    </div>
-                </div>
-                <div class="md:col-span-5 md:col-start-8 order-1 md:order-2">
-                    <h3 class="text-3xl md:text-4xl font-light italic serif mb-8 leading-tight">Thermal Intelligence</h3>
-                    <p class="text-stone-600 font-light leading-relaxed mb-6">
-                        When cotton is woven by hand, the tension is managed by human sensitivity. This preserves the natural air-pockets of the indigenous fiber, creating an organic breathability that keeps the wearer cool in heat and insulated in cold.
-                    </p>
-                    <p class="text-stone-600 font-light leading-relaxed">
-                        Unlike the crushed fibers of industrial production, Felis Onca cloth remains "alive"—a structural superiority that responds to the climate and the body.
-                    </p>
-                </div>
-            </div>
-        </section>
 
-        <section class="max-w-6xl mx-auto px-12 py-24 border-t border-stone-200 fade-in">
-            <div class="grid md:grid-cols-12 gap-12 items-center">
-                <div class="md:col-span-5">
-                    <h3 class="text-3xl md:text-4xl font-light italic serif mb-8 leading-tight">The Selvedge of Authenticity</h3>
-                    <p class="text-stone-600 font-light leading-relaxed">
-                        The edge of our fabric tells the story of the shuttle’s return. A hand-loomed selvedge is soft, durable, and uniquely irregular. It is the certificate of authenticity that separates a heritage piece from a disposable garment. To wear Felis Onca is to wear a unique topography of human effort.
-                    </p>
-                </div>
-                <div class="md:col-span-6 md:col-start-7 aspect-[16/9] overflow-hidden bg-stone-100">
-                    <img src="assets/fabric.jpg" alt="Fabric Detail" class="w-full h-full object-cover">
-                </div>
+        <section class="h-[500vh] relative border-t border-stone-200" id="patina-trigger">
+    <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center">
+        
+        <div class="flex h-full will-change-transform" id="patina-scroll" style="width: 400vw;">
+            
+            <div class="w-screen h-full shrink-0 relative">
+                <img src="assets/fabric.jpg" class="w-full h-full object-cover brightness-95" alt="Natural Alchemy">
+                <div class="absolute bottom-12 left-12 text-white/60 text-[10px] uppercase tracking-[0.5em] backdrop-blur-sm bg-black/10 px-4 py-2">Alchemy 01 / The Primordial</div>
             </div>
-        </section>
 
-        <section class="ink-bleed py-32 border-t border-stone-200 fade-in">
-            <div class="max-w-3xl mx-auto px-12 text-center">
-                <h3 class="text-3xl md:text-4xl font-light italic serif mb-10 leading-tight">Colors Borrowed from the Soil</h3>
-                <p class="text-stone-600 font-light leading-relaxed mb-12">
-                    Our hues are birthed in vats of Indigo, Madder root, and Myrobalan. Using mineral-rich heritage waters, we bind these pigments to the fiber. These are living colors—they evolve with the wearer, developing a patina of life that synthetic dyes can never achieve.
+            <div class="w-screen h-full shrink-0 relative">
+                <img src="assets/grey.jpg" class="w-full h-full object-cover brightness-95" alt="Grey Alchemy">
+                <div class="absolute bottom-12 left-12 text-white/60 text-[10px] uppercase tracking-[0.5em] backdrop-blur-sm bg-black/10 px-4 py-2">Alchemy 02 / The Mineral</div>
+            </div>
+
+            <div class="w-screen h-full shrink-0 relative">
+                <img src="assets/maroon.jpg" class="w-full h-full object-cover brightness-95" alt="Maroon Alchemy">
+                <div class="absolute bottom-12 left-12 text-white/60 text-[10px] uppercase tracking-[0.5em] backdrop-blur-sm bg-black/10 px-4 py-2">Alchemy 03 / The Botanical</div>
+            </div>
+
+            <div class="w-screen h-full shrink-0 relative">
+                <img src="assets/teal.jpg" class="w-full h-full object-cover brightness-95" alt="Teal Alchemy">
+                <div class="absolute bottom-12 left-12 text-white/60 text-[10px] uppercase tracking-[0.5em] backdrop-blur-sm bg-black/10 px-4 py-2">Alchemy 04 / The Deep</div>
+            </div>
+        </div>
+
+        <div class="absolute z-10 inset-0 flex items-center justify-center pointer-events-none">
+            <div class="max-w-3xl mx-auto px-8 py-16 text-center backdrop-blur-xl bg-white/40 rounded-sm border border-white/30 shadow-2xl">
+                <span class="text-[10px] uppercase tracking-[0.3em] md:tracking-[0.8em] text-stone-900 mb-8 block">The Atelier of Alchemy</span>
+                <h3 class="text-4xl md:text-6xl font-light italic serif mb-10 leading-tight text-stone-900">The Living Patina</h3>
+                <p class="text-stone-900 font-light leading-[1.8] serif text-xl md:text-2xl italic mb-8 max-w-2xl mx-auto">
+                    Our palette is a silent dialogue with nature—a collection of living colors birthed from deep intelligence. These pigments are bound to the heart of the fiber through the patience of time.
                 </p>
-                <a href="#" class="text-[10px] uppercase tracking-[0.5em] border-b border-stone-800 pb-2 hover:text-stone-400 hover:border-stone-400 transition-colors">Request the Prospectus</a>
+                <div class="mt-12 w-32 h-[1px] bg-stone-900/5 mx-auto relative overflow-hidden">
+                    <div class="absolute inset-0 bg-stone-900 transition-transform duration-200 origin-left scale-x-0" id="patina-progress"></div>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
     </main>
 
-   <footer class="py-20 px-8 border-t border-stone-200 text-center">
-        <p class="text-[10px] uppercase tracking-[0.3em] text-stone-400">© 2026 Felis Onca. Ancient DNA. Modern Mastery.</p>
+   <footer class="py-8 px-8 border-t border-stone-200 text-center bg-[#F4F2EE]">
+        <p class="text-[10px] uppercase tracking-[0.3em] text-stone-400 mb-6">© 2026 Felis Onca. Ancient DNA. Modern Mastery.</p>
+        <p class="text-xs serif italic text-stone-500 tracking-widest">The Restoration of Woven Air.</p>
     </footer>
+
+<script>
+    const trigger = document.getElementById('patina-trigger');
+    const scrollBox = document.getElementById('patina-scroll');
+    const progressBar = document.getElementById('patina-progress');
+
+    const handleScroll = () => {
+        const triggerRect = trigger.getBoundingClientRect();
+        const triggerHeight = trigger.offsetHeight;
+        const screenHeight = window.innerHeight;
+
+        // Current scroll progress within the trigger (0 to 1)
+        let progress = Math.abs(triggerRect.top) / (triggerHeight - screenHeight);
+        
+        // Clamp the progress so it doesn't exceed bounds
+        if (progress < 0) progress = 0;
+        if (progress > 1) progress = 1;
+
+        if (triggerRect.top <= 0 && triggerRect.bottom >= screenHeight) {
+            // Movement math: 
+            // We move -300vw (the width of 3 images) to reveal the 4th.
+            // 300vw is 75% of the total 400vw width.
+            scrollBox.style.transform = `translateX(-${progress * 75}%)`;
+            progressBar.style.transform = `scale-x(${progress})`;
+        } else if (triggerRect.top > 0) {
+            scrollBox.style.transform = `translateX(0%)`;
+            progressBar.style.transform = `scale-x(0)`;
+        } else if (triggerRect.bottom < screenHeight) {
+            // Locking the 4th image (Maroon) perfectly
+            scrollBox.style.transform = `translateX(-75%)`;
+            progressBar.style.transform = `scale-x(1)`;
+        }
+   
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+</script>    
 
 </body>
 </html>
