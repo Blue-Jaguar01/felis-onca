@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provenance | Felis Onca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Pinyon+Script&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #F4F2EE; color: #1C1C1C; font-family: 'Inter', sans-serif; letter-spacing: 0.01em; }
+        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+        
+        /* The Luxury Reveal */
+        .fade-in { animation: fadeIn 2.5s ease-out forwards; opacity: 0; }
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(20px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        /* Artistic Map Filter */
+        .map-sepia { filter: sepia(0.2) contrast(1.1) brightness(0.95); transition: all 1.5s ease; }
+        .map-sepia:hover { filter: sepia(0) contrast(1) brightness(1); }
+    </style>
+</head>
+<body class="antialiased">
+
+   <nav class="w-full pt-8 pb-8 md:px-20 bg-[#F4F2EE] border-b border-stone-200">
+    <div class="flex flex-col items-center">
+        
+        <div class="mb-4 fade-in" style="animation-delay: 0.2s;">
+            <a href="index.html">
+                <img src="Logo/Logo7.png" alt="Felis Onca Seal" class="h-12 w-auto opacity-90"> </a>
+        </div>
+
+        <div class="mb-6 fade-in" style="animation-delay: 0.4s;">
+            <a href="index.html" class="text-stone-800 transition hover:opacity-60">
+                <h1 class="text-2xl md:text-3xl uppercase font-light tracking-[1em] -mr-[1em]">
+                    Felis Onca
+                </h1>
+            </a>
+        </div>
+
+        <div class="flex justify-center items-center gap-12 md:gap-24 fade-in" style="animation-delay: 0.6s;">
+    <a href="genesis.html" class="text-[10px] uppercase font-light text-stone-400 hover:text-stone-800 tracking-[0.5em] -mr-[0.5em]" style="font-family: 'Tenor Sans';">Genesis</a>
+    <a href="provenance.html" class="text-[10px] uppercase font-medium border-b border-stone-800 pb-1 tracking-[0.5em] -mr-[0.5em]" style="font-family: 'Tenor Sans';">Provenance</a>
+    <a href="atelier.html" class="text-[10px] uppercase font-light text-stone-400 hover:text-stone-800 tracking-[0.5em] -mr-[0.5em]" style="font-family: 'Tenor Sans';">Atelier</a>
+</div>
+
+    </div>
+</nav>
+
+<main class="overflow-hidden">
+        
+        <section class="min-h-[60vh] flex flex-col items-center justify-center text-center px-6 py-36 fade-in">
+            <span class="text-[10px] uppercase tracking-[0.6em] text-stone-400 mb-10">The Provenance of Origin</span>
+            <h1 class="text-4xl md:text-6xl font-light serif italic leading-tight max-w-4xl">
+                To know the fabric, <br> One must stand in its soil.
+            </h1>
+        </section>
+
+        <section class="max-w-6xl mx-auto px-8 py-20 border-t border-stone-200 fade-in">
+    <div class="text-center mb-12">
+        <span class="text-[10px] uppercase tracking-[0.8em] text-stone-400 mb-6 block">The Provenance of the Map</span>
+        <h2 class="text-5xl serif italic font-light">The Regur Basin</h2>
+    </div>
+    
+    <div class="relative group cursor-crosshair max-w-2xl mx-auto">
+        
+        <div class="aspect-[4/5] bg-stone-200 overflow-hidden map-frame border border-stone-300 shadow-sm">
+            <img src="assets/Map.jpg" 
+                 class="w-full h-full object-cover opacity-75 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000" 
+                 alt="Cartographic Record of the Regur Basin">
+        </div>
+
+        <div class="absolute bottom-[37%] left-[62%] group/pin">
+            <div class="w-2 h-2 bg-stone-900 rounded-full animate-pulse shadow-lg"></div>
+            
+            <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-white/95 p-3 shadow-xl border border-stone-100 w-48 backdrop-blur-sm transition-all duration-1000">
+                <p class="text-[9px] uppercase tracking-widest text-stone-400 mb-1">Terroir: Perambalur</p>
+                <p class="serif italic text-sm text-stone-800 leading-snug">
+                    Mineral-rich Regur soil. Ancestral home of the fiber.
+                </p>
+                <div class="absolute bottom-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-b-[8px] border-b-white"></div>
+            </div>
+        </div>
+
+        <div class="absolute top-[62%] left-[43%] group/pin">
+            <div class="w-2 h-2 bg-stone-900 rounded-full animate-pulse shadow-lg"></div>
+            
+            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 bg-white/95 p-3 shadow-xl border border-stone-100 w-48 backdrop-blur-sm transition-all duration-1000">
+                <p class="text-[9px] uppercase tracking-widest text-stone-400 mb-1">Estate: Tiruppur</p>
+                <p class="serif italic text-sm text-stone-800 leading-snug">
+                    The Atelier. <br> Where the raw fiber finds form.
+                </p>
+                <div class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+        <section class="bg-stone-100 py-20 px-12 fade-in border-y border-stone-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <span class="text-[10px] uppercase tracking-[0.8em] text-stone-400 mb-6 block">The Provenance of Pace</span>
+                <h2 class="text-4xl md:text-5xl serif italic font-light leading-tight">The Ancient Stewardship</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10 items-start">
+                
+                <div class="group relative space-y-6">
+                    <div class="aspect-[4/5] overflow-hidden shadow-2xl transition-all duration-[1s] group-hover:scale-[1.03] bg-black">
+                        <img src="assets/Soil.jpg" 
+                             class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-[1.5s] ease-out" 
+                             alt="Karisal Soil">
+                    </div>
+                    <p class="serif italic text-lg text-stone-600 px-2 group-hover:text-stone-900 transition-colors">
+                        The Karisal—dark, mineral-rich black soils that demands botanical resilience.
+                    </p>
+                </div>
+
+                <div class="group relative space-y-6 md:mt-20">
+                    <div class="aspect-[4/5] overflow-hidden shadow-2xl transition-all duration-[1s] group-hover:scale-[1.03] bg-black">
+                        <img src="assets/bullock.jpg" 
+                             class="w-full h-full object-cover object-[35%-65%] grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-[1.5s] ease-out" 
+                             alt="Traditional Tilling">
+                    </div>
+                    <p class="serif italic text-lg text-stone-600 px-2 group-hover:text-stone-900 transition-colors">
+                        We preserve the soil's air-pockets through the pace of the bullock and the hand-plough.
+                    </p>
+                </div>
+
+                <div class="group relative space-y-6">
+                    <div class="aspect-[4/5] overflow-hidden shadow-2xl transition-all duration-[1s] group-hover:scale-[1.03] bg-black">
+                        <img src="assets/pink_saree_woman_with_cotton_censored.png" 
+                             class="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-[1.5s] ease-out" 
+                             alt="Heritage Farmer">
+                    </div>
+                    <p class="serif italic text-lg text-stone-600 px-2 group-hover:text-stone-900 transition-colors">
+                        A matriarchal lineage preserving botanical sovereignty. <br> Every boll harvested with wisdom.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-12 py-24 fade-in">
+    <div class="grid md:grid-cols-12 gap-16 items-center">
+        <div class="md:col-span-6">
+            <span class="text-[10px] uppercase tracking-[0.8em] text-stone-400 mb-8 block">The Provenance of the Era</span>
+            <h2 class="text-4xl md:text-5xl serif italic font-light mb-10 leading-tight">The Gossamer Proof</h2>
+            <p class="serif text-xl md:text-2xl text-stone-700 leading-relaxed italic">
+                In the Indus Valley, a silver jar held a secret: a fragment of cotton miraculously preserved for 5,000 years. DNA analysis of the 5,000-year-old Mohenjo-Daro fragment confirms a shared ancestral marker with our Karunganni. This is not a new luxury; it is a biological resumption.
+            </p>
+        </div>
+        <div class="md:col-span-5 md:col-start-8">
+            <div class="aspect-square bg-stone-200 overflow-hidden shadow-2xl group">
+                <img src="assets/cotton.jpg" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-[1.5s]">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="bg-stone-900 text-stone-100 py-24 px-6 text-center fade-in">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="serif text-3xl md:text-5xl leading-relaxed font-light italic">
+                "In a world of mass-produced smoothness, <br> we offer the luxury of character."
+            </h3>
+        </div>
+    </section>
+
+    <footer class="py-20 px-8 border-t border-stone-200 text-center">
+        <p class="text-[10px] uppercase tracking-[0.3em] text-stone-400">© 2026 Felis Onca. Ancient DNA. Modern Mastery.</p>
+    </footer>
+
+</body>
+</html>
