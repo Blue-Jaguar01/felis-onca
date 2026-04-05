@@ -17,8 +17,11 @@
             to { opacity: 1; transform: translateY(0); } 
         }
 
-        #horizontal-scroll, #content-slider { 
-            will-change: transform; 
+        #horizontal-scroll, #content-slider, #patina-scroll { 
+            will-change: transform;
+            transform: translateZ(0); /* Forces GPU rendering */
+            backface-visibility: hidden;
+            perspective: 1000; 
         }
 
         /* Hero Zoom Animation */
