@@ -12,11 +12,12 @@
         h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
         
        /* THE GPU PERFORMANCE BOOST */
-        #patina-scroll {
-            backface-visibility: hidden;
-            transform-style: preserve-3d;
-            will-change: transform;
-        }
+        #horizontal-scroll, #content-slider, #patina-scroll {
+    will-change: transform;
+    transform: translateZ(0); /* Forces GPU rendering */
+    backface-visibility: hidden;
+    perspective: 1000;
+}
 
         /* The Luxury Reveal */
         .fade-in { animation: fadeIn 2.5s ease-out forwards; opacity: 0; }
