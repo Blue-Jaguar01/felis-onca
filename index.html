@@ -3,94 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felis Onca | Indigenous Organic Cotton</title>
+    <title>Genesis | Felis Onca</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Pinyon+Script&family=Tenor+Sans&display=swap" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
-        body { background-color: #F9F8F6; color: #1C1C1C; font-family: 'Inter', sans-serif; }
+        body { background-color: #F4F2EE; color: #1C1C1C; font-family: 'Inter', sans-serif; letter-spacing: 0.01em; }
         h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
         
-        /* THE REFRESHING REVEAL FEATURE */
-        .fade-in { animation: fadeIn 2.5s ease-out forwards; }
+        .fade-in { animation: fadeIn 2.5s ease-out forwards; opacity: 0; }
         @keyframes fadeIn { 
             from { opacity: 0; transform: translateY(20px); } 
             to { opacity: 1; transform: translateY(0); } 
         }
 
-        .hero-gradient { background: linear-gradient(to bottom, rgba(249,248,246,0) 0%, rgba(249,248,246,1) 100%); }
+        #horizontal-scroll, #content-slider { 
+            will-change: transform; 
+        }
+
+        /* Hero Zoom Animation */
+        @keyframes heroZoomOut {
+            from { transform: scale(1.15); opacity: 0.3; }
+            to { transform: scale(1); opacity: 0.5; }
+        }
+        .hero-zoom { animation: heroZoomOut 4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased text-stone-900">
 
-    <nav class="w-full px-8 py-8 pb-10 md:px-20">
-        <div class="flex justify-center mb-8">
-            <a href="index.html" class="text-xl md:text-2xl tracking-[0.8em] font-light uppercase transition hover:opacity-80">Felis Onca</a>
+<nav class="w-full pt-8 pb-8 md:px-20 bg-[#F4F2EE] border-b border-stone-200">
+    <div class="flex flex-col items-center">
+        <div class="mb-4 fade-in">
+            <a href="index.html">
+                <img src="assets/logo.jpg" alt="Felis Onca Seal" class="h-12 w-auto opacity-90"> 
+            </a>
         </div>
-        <div class="flex justify-center items-center gap-32 md:gap-48 border-t border-stone-100 pt-8">
-            <a href="provenance.html" class="text-[12px] uppercase tracking-[0.5em] font-light hover:text-stone-400 transition">The Provenance</a>
-            <a href="atelier.html" class="text-[12px] uppercase tracking-[0.5em] font-light hover:text-stone-400 transition">The Craft</a>        
+        <div class="mb-6 fade-in">
+            <a href="index.html" class="text-stone-800 transition hover:opacity-60">
+                <h1 class="text-2xl md:text-3xl uppercase font-light tracking-[1em] -mr-[1em]">Felis Onca</h1>
+            </a>
         </div>
-    </nav>
+        <div class="flex justify-center items-center gap-12 md:gap-24 fade-in">
+            <a href="genesis.html" class="text-[10px] uppercase font-medium border-b border-stone-800 pb-1 tracking-[0.5em] -mr-[0.5em]" style="font-family: 'Tenor Sans';">Genesis</a>
+            <a href="provenance.html" class="text-[10px] uppercase font-light text-stone-400 hover:text-stone-800 tracking-[0.5em] -mr-[0.5em]" style="font-family: 'Tenor Sans';">Provenance</a>
+            <a href="craft.html" class="text-[10px] uppercase font-light text-stone-400 hover:text-stone-800 tracking-[0.5em] -mr-[0.5em]" style="font-family: 'Tenor Sans';">Atelier</a>
+        </div>
+    </div>
+</nav>
 
-    <main>
-        <section class="relative h-[85vh] overflow-hidden fade-in">
-            <img src="assets/fabric.jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="The Fabric">
-            <div class="absolute inset-0 hero-gradient"></div>
+<main class="selection:bg-stone-200">
+
+    <section class="h-[600vh] relative" id="horizontal-trigger">
+        <div class="sticky top-0 h-screen w-full overflow-hidden">
+            <div class="absolute inset-0 flex" id="horizontal-scroll" style="width: 400vw;">
+                <div class="w-screen h-screen shrink-0 relative"><img src="assets/fabric.jpg" class="w-full h-full object-cover brightness-50"></div>
+                <div class="w-screen h-screen shrink-0 relative"><img src="assets/grey.jpg" class="w-full h-full object-cover brightness-50"></div>
+                <div class="w-screen h-screen shrink-0 relative"><img src="assets/maroon.jpg" class="w-full h-full object-cover brightness-50"></div>
+                <div class="w-screen h-screen shrink-0 relative"><img src="assets/teal.jpg" class="w-full h-full object-cover brightness-50"></div>
+            </div>
+
+            <div class="relative z-10 h-full flex" id="content-slider" style="width: 400vw;">
+                <div class="w-screen h-full shrink-0 flex flex-col justify-center px-[10vw] text-white">
+                    <span class="text-[9px] uppercase tracking-[1em] text-stone-300 mb-10 block">3000 BC</span>
+                    <h2 class="text-6xl md:text-8xl serif italic font-light leading-tight">A survivor of <br> five millennia.</h2>
+                    <p class="mt-12 serif text-2xl text-stone-200 italic max-w-lg">The Karunganni landrace predates modern agriculture.</p>
+                </div>
+                <div class="w-screen h-full shrink-0 flex flex-col justify-center px-[10vw] text-white">
+                    <span class="text-[9px] uppercase tracking-[1em] text-stone-300 mb-10 block">The 0.01%</span>
+                    <h2 class="text-6xl md:text-8xl serif italic font-light leading-tight">Rain-fed. <br> Rain-born.</h2>
+                    <p class="mt-12 serif text-2xl text-stone-200 italic max-w-lg">We harvest only where the monsoon dictates.</p>
+                </div>
+                <div class="w-screen h-full shrink-0 flex flex-col justify-center px-[10vw] text-white">
+                    <span class="text-[9px] uppercase tracking-[1em] text-stone-300 mb-10 block">The Vitality</span>
+                    <h2 class="text-6xl md:text-8xl serif italic font-light leading-tight">Earth <br> Chemistry.</h2>
+                    <p class="mt-12 serif text-2xl text-stone-200 italic max-w-lg">Pigments borrowed from barks and mineral-heavy clays.</p>
+                </div>
+                <div class="w-screen h-full shrink-0 flex flex-col justify-center px-[10vw] text-white">
+                    <span class="text-[9px] uppercase tracking-[1em] text-stone-300 mb-10 block">Hand-Signed</span>
+                    <h2 class="text-6xl md:text-8xl serif italic font-light leading-tight">Woven <br> Dignity.</h2>
+                    <p class="mt-12 serif text-2xl text-stone-200 italic max-w-lg">Every thread is a sovereign choice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative h-screen bg-[#F4F2EE] flex overflow-hidden border-t border-stone-200">
+        <a href="provenance.html" class="group relative flex-1 overflow-hidden transition-all duration-1000 ease-in-out hover:flex-[1.5] border-r border-stone-200">
+            <img src="assets/bullock.jpg" class="absolute inset-0 w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105 group-hover:scale-100">
+            <div class="absolute inset-0 bg-stone-900/20 group-hover:bg-transparent transition-colors duration-700"></div>
+            <div class="absolute bottom-12 left-12 text-white z-10">
+                <p class="text-[10px] uppercase tracking-[0.5em] mb-4 opacity-70">Archive 01</p>
+                <h3 class="text-6xl md:text-7xl serif italic">Provenance</h3>
+                <div class="mt-8 w-12 h-px bg-white/50 group-hover:w-24 transition-all duration-700"></div>
+            </div>
+        </a>
+        <a href="craft.html" class="group relative flex-1 overflow-hidden transition-all duration-1000 ease-in-out hover:flex-[1.5]">
+            <img src="assets/handspinning.jpg" class="absolute inset-0 w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-105 group-hover:scale-100">
+            <div class="absolute inset-0 bg-stone-900/20 group-hover:bg-transparent transition-colors duration-700"></div>
+            <div class="absolute bottom-12 left-12 text-white z-10">
+                <p class="text-[10px] uppercase tracking-[0.5em] mb-4 opacity-70">Archive 02</p>
+                <h3 class="text-6xl md:text-7xl serif italic">Atelier</h3>
+                <div class="mt-8 w-12 h-px bg-white/50 group-hover:w-24 transition-all duration-700"></div>
+            </div>
+        </a>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-8 py-28 border-t border-stone-200 fade-in">
+        <div class="text-center mb-24">
+            <h2 class="text-4xl md:text-5xl serif italic mb-6 font-light">The Four Alchemies</h2>
+            <p class="text-[10px] uppercase tracking-[0.6em] text-stone-400">The Genesis of the Object</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+            <div class="space-y-6">
+                <h3 class="text-[11px] uppercase text-stone-800 pb-4 border-b border-stone-200 tracking-[0.4em]">I. The Seed</h3>
+                <p class="text-stone-500 text-lg font-light leading-relaxed serif italic">Sourced exclusively from the final custodians of the Primordial seed.</p>
+            </div>
+            <div class="space-y-6 lg:mt-12">
+                <h3 class="text-[11px] uppercase text-stone-800 pb-4 border-b border-stone-200 tracking-[0.4em]">II. The Thread</h3>
+                <p class="text-stone-500 text-lg font-light leading-relaxed serif italic">Hand-spun using the Amber Charkha. This slow, rhythmic cadence preserves high-tensile strength.</p>
+            </div>
+            <div class="space-y-6">
+                <h3 class="text-[11px] uppercase text-stone-800 pb-4 border-b border-stone-200 tracking-[0.4em]">III. The Color</h3>
+                <p class="text-stone-500 text-lg font-light leading-relaxed serif italic">A palette birthed from the earth, using pigments extracted from barks and minerals.</p>
+            </div>
+            <div class="space-y-6 lg:mt-12">
+                <h3 class="text-[11px] uppercase text-stone-800 pb-4 border-b border-stone-200 tracking-[0.4em]">IV. The Loom</h3>
+                <p class="text-stone-500 text-lg font-light leading-relaxed serif italic">Hand-woven to perfection. A structural integrity unique to heritage craft.</p>
+            </div>
+        </div>
+    </section>
+
+   <section class="bg-stone-50 py-20 px-6 border-t border-stone-200 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        
+        <div class="mb-8">
+            <img src="assets/logo.jpg" class="h-14 w-auto mx-auto opacity-80" alt="Felis Onca Seal">
+        </div>
+
+        <div class="mb-8">
+            <span class="text-[18px] md:text-[22px] uppercase tracking-[1em] text-stone-900 mb-6 block font-light" style="font-family: 'Tenor Sans';">
+                The 2027 Resumption
+            </span>
             
-            <div class="absolute bottom-28 left-0 right-0 text-center px-4">
-               <span class="text-[10px] uppercase tracking-[0.4em] mb-4 block text-stone-500">The Seed to Stitch Project</span>
-                <h1 class="text-5xl md:text-8xl font-light leading-tight serif">Quietly Crafted. <br> Deeply Rooted.</h1>
+            <p class="serif text-lg md:text-xl text-stone-500 italic max-w-xl mx-auto leading-relaxed">
+                After years of perfecting our ancestral craft, <br class="hidden md:block"> Felis Onca will open its first physical spaces in one year.
+            </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <div class="flex justify-center items-center gap-4 text-stone-400 mb-8">
+                <span class="h-px w-6 bg-stone-300"></span>
+                <p class="text-[9px] uppercase tracking-[0.5em]">The journey into touch begins shortly</p>
+                <span class="h-px w-6 bg-stone-300"></span>
             </div>
-        </section>
-
-        <section class="max-w-6xl mx-auto px-12 py-32 fade-in">
-            <div class="grid md:grid-cols-12 gap-12 items-center">
-                <div class="md:col-span-6">
-                    <span class="text-[10px] uppercase tracking-[0.3em] text-stone-400 mb-4 block">The Origin</span>
-                    <h2 class="text-4xl md:text-5xl mb-8 font-light serif italic leading-tight">Reviving the <br>Indigenous Soul</h2>
-                    <p class="text-stone-600 leading-relaxed font-light mb-8">
-                        Felis Onca was born from a singular mission: to protect the purity of indigenous organic cotton and the hands that weave it. Our fibers are grown from heirloom seeds, nourished by rain, and dyed with the earth itself. This is luxury as a biological responsibility.
-                    </p>
-                    <a href="heritage.html" class="text-[10px] uppercase tracking-[0.4em] border-b border-stone-800 pb-2 hover:text-stone-400 transition">Explore The Provenance</a>
+            
+            <a href="genesis.html" class="group flex flex-col items-center space-y-3">
+                <div class="w-14 h-14 border border-stone-900 rounded-full flex items-center justify-center transition-all duration-700 group-hover:bg-stone-900 group-hover:scale-110">
+                    <span class="text-stone-900 group-hover:text-white transition-colors text-lg">→</span>
                 </div>
-                <div class="md:col-span-5 md:col-start-8">
-                    <div class="aspect-[4/5] overflow-hidden group">
-                         <img src="assets/bullock.jpg" class="w-full h-full object-cover transition-all duration-1000 group-hover:grayscale" alt="The Provenance">
-                    </div>
-                </div>
-            </div>
-        </section>
+                <span class="text-[9px] uppercase tracking-[0.6em] text-stone-500 group-hover:text-stone-900 transition-colors">Our Genesis</span>
+            </a>
+        </div>
+    </div>
 
-        <section class="max-w-6xl mx-auto px-12 py-32 border-t border-stone-200 fade-in">
-            <div class="grid md:grid-cols-12 gap-12 items-center">
-                <div class="md:col-span-5 aspect-[4/5] overflow-hidden order-2 md:order-1 group">
-                    <img src="assets/handspinning.jpg" class="w-full h-full object-cover transition-all duration-1000 group-hover:grayscale" alt="The Craft">
-                </div>
-                <div class="md:col-span-6 md:col-start-8 order-1 md:order-2">
-                    <span class="text-[10px] uppercase tracking-[0.3em] text-stone-400 mb-4 block">The Atelier</span>
-                    <h2 class="text-4xl md:text-5xl mb-8 font-light serif italic leading-tight">The Humanist <br>Rhythm</h2>
-                    <p class="text-stone-600 leading-relaxed font-light mb-8">
-                        Every thread is twisted by hand; every inch is woven with intention. We offer the "luxury of character"—where human variation is celebrated over industrial perfection.
-                    </p>
-                    <a href="craft.html" class="text-[10px] uppercase tracking-[0.4em] border-b border-stone-800 pb-2 hover:text-stone-400 transition">View The Craft</a>
-                </div>
-            </div>
-        </section>
+    <div class="absolute -bottom-10 -right-10 text-[18rem] serif italic text-stone-200/20 select-none pointer-events-none">27</div>
+</section>
+</main>
 
-        <section class="py-40 text-center max-w-2xl mx-auto px-6 fade-in">
-            <h2 class="text-4xl md:text-5xl mb-6 font-light serif italic">Join the Founding Circle</h2>
-            <p class="text-[10px] tracking-[0.4em] uppercase text-stone-400 mb-16 italic">Limited Release Coming Late 2026</p>
-            <form class="flex flex-col gap-8">
-                <input type="email" placeholder="Email Address" class="bg-transparent border-b border-stone-300 py-4 focus:outline-none focus:border-stone-800 transition-colors font-light text-center">
-                <button class="bg-stone-900 text-white px-12 py-4 text-[10px] uppercase tracking-[0.4em] hover:bg-stone-800 transition-all">Request Access</button>
-            </form>
-        </section>
-    </main>
+<footer class="py-20 px-8 border-t border-stone-200 text-center bg-[#F4F2EE]">
+    <p class="text-[10px] uppercase tracking-[0.3em] text-stone-400 mb-6">© 2026 Felis Onca. Ancient DNA. Modern Mastery.</p>
+    <p class="text-xs serif italic text-stone-500 tracking-widest">The Restoration of Woven Air.</p>
+</footer>
 
-    <footer class="py-20 px-8 border-t border-stone-200 text-center">
-        <p class="text-[10px] uppercase tracking-[0.3em] text-stone-400">© 2026 Felis Onca. Hand-woven in India.</p>
-    </footer>
+<script>
+    const handleScroll = () => {
+        const trigger = document.getElementById('horizontal-trigger');
+        const bgScroll = document.getElementById('horizontal-scroll');
+        const contentSlider = document.getElementById('content-slider');
+        
+        if (!trigger || !bgScroll || !contentSlider) return;
+
+        const triggerRect = trigger.getBoundingClientRect();
+        const triggerHeight = trigger.offsetHeight;
+        const viewportHeight = window.innerHeight;
+
+        if (triggerRect.top <= 0 && triggerRect.bottom >= viewportHeight) {
+            const totalScrollableHeight = triggerHeight - viewportHeight;
+            let rawProgress = Math.abs(triggerRect.top) / totalScrollableHeight;
+            
+            let mappedProgress;
+            if (rawProgress < 0.1) {
+                mappedProgress = 0;
+            } else if (rawProgress > 0.9) {
+                mappedProgress = 1;
+            } else {
+                mappedProgress = (rawProgress - 0.1) / 0.8;
+            }
+            
+            const movePercentage = mappedProgress * 75; 
+            bgScroll.style.transform = `translate3d(-${movePercentage}%, 0, 0)`;
+            contentSlider.style.transform = `translate3d(-${movePercentage}%, 0, 0)`;
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+</script>
 
 </body>
 </html>
